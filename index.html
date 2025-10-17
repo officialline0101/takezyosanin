@@ -825,6 +825,7 @@
         <div class="menu-sections">
             <button type="button" onclick="showMenu('male')">産後ケア(滞在型)</button>
             <button type="button" onclick="showMenu('female')">産後ケア(訪問型)</button>
+            <button type="button" onclick="showMenu('sonota')">その他のケア</button>
         </div>
 
         <div id="treatment-text" style="display: none; margin-bottom: 10px;"></div>
@@ -852,6 +853,17 @@
                 <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">熊本市訪問</button>
                 <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">宇城市訪問</button>
                 <button type="button" onclick="selectSymptom(this, 'treatment10')" data-price="15000">宇土市訪問</button>
+            </div>
+        </div>
+
+        <div id="sonota" class="menu-section">
+            <div class="labeltyuuou">
+                <span class="highlight-text">◆その他のケア◆</span>
+            </div>
+            <div class="symptoms">
+                <button type="button" onclick="selectSymptom(this, 'treatment11')" data-price="15000">母乳ケア</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment12')" data-price="15000">赤ちゃんケア</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment13')" data-price="15000">妊婦ケア</button>
             </div>
         </div>
 
@@ -957,7 +969,10 @@
             '宇土市産後ケア長時間型': 180,
             '熊本市訪問': 90,
             '宇城市訪問': 90,
-            '宇土市訪問': 90
+            '宇土市訪問': 90,
+            '母乳ケア': 60,
+            '赤ちゃんケア': 60,
+            '妊婦ケア': 90
         };
 
         let selectedMenuTime = 0;
@@ -1252,6 +1267,12 @@ function updateDisplayInfo() {
             } else if (treatmentId === 'treatment9') {
                 treatmentText.innerHTML = `<div style="text-align: center;"><strong>所要時間1時間30分</strong></div>`;
             } else if (treatmentId === 'treatment10') {
+                treatmentText.innerHTML = `<div style="text-align: center;"><strong>所要時間1時間30分</strong></div>`;
+            } else if (treatmentId === 'treatment11') {
+                treatmentText.innerHTML = `<div style="text-align: center;"><strong>所要時間1時間</strong></div>`;
+            } else if (treatmentId === 'treatment12') {
+                treatmentText.innerHTML = `<div style="text-align: center;"><strong>所要時間1時間</strong></div>`;
+            } else if (treatmentId === 'treatment13') {
                 treatmentText.innerHTML = `<div style="text-align: center;"><strong>所要時間1時間30分</strong></div>`;
             } else {
                 treatmentText.innerHTML = '';
